@@ -17,13 +17,11 @@
   <script>
     // define the dimensions and margins for the graph
     
-    // define the dimensions and margins for the graph
-    
     // var margin = {top: 40, right: 30, bottom: 50, left: 60};
     // var width = 900 - margin.left - margin.right;
     // var height = 370 - margin.top - margin.bottom;
 
-    var margin = {top: 25, right: 25, bottom: 55, left: 100};
+    var margin = {top: 10, right: 20, bottom: 20, left: 55};
     var width = 500 - margin.left - margin.right;
     var height = 370 - margin.top - margin.bottom;
 
@@ -32,8 +30,7 @@
     // var x = d3.scaleLinear().range([0, width]);   
     // var y = d3.scaleBand().range([0, height]).padding(0.3); 
     var x = d3.scaleLinear().range([0, width]);   
-    var y = d3.scaleBand().range([0, height]).padding(0.2); 
-
+    var y = d3.scaleBand().range([0, height]).padding(0.0); 
 
     // append svg and a group shifted by margins
     var svg = d3.select("body").append("svg").attr("id", "svg1")
@@ -41,7 +38,7 @@
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
       .attr("id", "container")
-      .attr("transform", "translate(" + margin.left + "," + margin.bottom + ")");
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     // load CSV
     var pathToCsv = "q3.csv";
@@ -52,7 +49,7 @@
         count: +d.count
       };
     }).then(function(data) {
-      ;
+      console.log(data);
 
       data = data.sort((a,b)=> d3.descending(a.count,b.count)).slice(0,5);
       // domains

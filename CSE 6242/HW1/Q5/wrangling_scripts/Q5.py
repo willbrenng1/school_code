@@ -6,6 +6,7 @@ that will be supplied to the template for generating the table.
 """
 
 import csv
+
 import operator
 
 
@@ -35,7 +36,7 @@ def data_wrangling(filter_class: str = None):
             table.append(row_data)
 
         # Programmatically get unique classes and sort alphabetically for dropdown - [2 point] Q5.4.a
-        dropdown_options = []
+        dropdown_options = sorted(list(set(e[1] for e in table)))
 
         # Filter, sort, and limit the table - [3 points] Q5.4.b
         # Filter the data by the class column (second column)
@@ -44,6 +45,6 @@ def data_wrangling(filter_class: str = None):
         # Order table by the count column (last column) - don't need to worry about tiebreaks
         table = sorted(table, key=operator.itemgetter(2), reverse=True)
         # Take only the first 10 rows
-        # filter_index =min(len(table), 10)
         table = table[0:10]
+
     return header, table, dropdown_options
