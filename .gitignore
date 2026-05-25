@@ -9,3 +9,8 @@ CSE 6242/project_testing/Crashes_in_DC-2.csv
 ISYE 6740/HW5/data/fashion-mnist_train.csv
 ISYE 6740/HW5/data/mnist_10digits.mat
 *.pdf
+*.parquet
+*.csv
+*.mat
+*.txt
+*.data
