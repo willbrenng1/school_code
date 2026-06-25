@@ -14,3 +14,9 @@ ISYE 6740/HW5/data/mnist_10digits.mat
 *.mat
 *.txt
 *.data
+*.pyc
+*.npz
+*.DS_Store
+*.npy
+*.png
+*.model

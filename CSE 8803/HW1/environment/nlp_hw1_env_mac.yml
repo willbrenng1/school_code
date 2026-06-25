@@ -1,0 +1,22 @@
+name: nlp_hw1
+channels:
+- defaults
+dependencies:
+- python<=3.12
+- matplotlib
+- numpy
+- scikit-learn<=1.6.1
+- notebook
+- jupyterlab
+- scipy<=1.15.2
+- pandas
+- nltk<=3.8.1
+- bs4
+- datasets=2.19.1
+- transformers
+- imbalanced-learn<=0.14.0
+- fsspec=2023.9.2
+- sympy
+- pip
+- pip:
+  - scikit-learn==1.3.2
